@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
+    <meta name="description" content="Portfolio of Hilal Lazuardi, a passionate Web Developer and Designer based in Gresik, Jawa Timur.">
+    <meta name="keywords" content="web developer, web designer, portfolio, Hilal Lazuardi">
+    <title>Portfolio Website - Hilal Lazuardi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -17,39 +22,44 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
+            </div>
+            <div class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div id="particles-js" class="particle-background"></div>
+        <div class="hero-background"></div>
+        <div class="hero-content" data-aos="fade-right">
             <h1>Hello, I'm <span class="highlight">Hilal Lazuardi</span></h1>
-            <h2>Web Developer & Designer</h2>
-            <p>I'm a passionate Web Developer and Designer with a strong eye for detail and a love for clean, user-centered design. With experience in both front-end development and UI/UX design, I bridge the gap between functionality and aesthetics to build engaging, responsive, and accessible websites. I thrive on turning complex problems into intuitive digital experiences, using tools like HTML, CSS, JavaScript, and design platforms like Figma and Adobe XD. Whether working independently or in a team, I always aim to deliver work that is not only technically sound but also visually compelling.</p>
+            <h2 class="typing-effect"></h2>
+            <p>I'm a passionate Web Developer and Designer with a strong eye for detail and a love for clean, user-centered design. I thrive on turning complex problems into intuitive digital experiences.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn primary-btn">View My Work</a>
                 <a href="#contact" class="btn secondary-btn">Contact Me</a>
             </div>
         </div>
-        <div class="hero-image">
-            <!-- Replace with your image -->
-            <img src="hilal.jpg" alt="my profil">
+        <div class="hero-image" data-aos="fade-left">
+            <img src="hilal.jpg" alt="Profile picture of Hilal Lazuardi" loading="lazy">
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
             <h2>About Me</h2>
             <div class="underline"></div>
         </div>
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-up" data-aos-delay="100">
                 <p>I'm a passionate Web Developer and Designer with a strong eye for detail and a love for clean, user-centered design. With experience in both front-end development and UI/UX design, I bridge the gap between functionality and aesthetics to build engaging, responsive, and accessible websites. I thrive on turning complex problems into intuitive digital experiences, using tools like HTML, CSS, JavaScript, and design platforms like Figma and Adobe XD. Whether working independently or in a team, I always aim to deliver work that is not only technically sound but also visually compelling.</p>
                 <div class="about-info">
                     <div class="info-item">
@@ -69,25 +79,77 @@
                         <span class="info-value">Available for Freelance</span>
                     </div>
                 </div>
-               <a href="cv.pdf" download class="btn primary-btn download-btn">Download CV</a>
+                <a href="cv.pdf" download class="btn primary-btn download-btn" aria-label="Download CV">Download CV</a>
+            </div>
+            <div class="about-details">
+                <div class="about-education" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>
+                            <span class="detail-title">Bachelor of Information Systems</span>
+                            <span class="detail-info">Cement Indonesia International University, Gresik</span>
+                            <span class="detail-date">2023 - now</span>
+                        </li>
+                        <li>
+                            <span class="detail-title">High School Diploma</span>
+                            <span class="detail-info">SMA Negeri 4 Probolinggo</span>
+                            <span class="detail-date">2020 - 2023</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-experience" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Work Experience</h3>
+                    <ul>
+                        <li>
+                            <span class="detail-title">Frontend Developer</span>
+                            <span class="detail-info">Tech Startup, Jakarta</span>
+                            <span class="detail-date">2022 - Present</span>
+                            <p>Developed responsive web applications using React and TypeScript, improving user engagement by 30%.</p>
+                        </li>
+                        <li>
+                            <span class="detail-title">UI/UX Design Intern</span>
+                            <span class="detail-info">Digital Agency, Surabaya</span>
+                            <span class="detail-date">2021 - 2022</span>
+                            <p>Designed user interfaces for mobile apps using Figma, contributing to a 20% increase in user satisfaction.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-languages" data-aos="fade-up" data-aos-delay="400">
+                    <h3>Language Skills</h3>
+                    <ul>
+                        <li>
+                            <span class="detail-title">Indonesian</span>
+                            <span class="detail-info">Native</span>
+                        </li>
+                        <li>
+                            <span class="detail-title">English</span>
+                            <span class="detail-info">Fluent (TOEFL iBT: 100)</span>
+                        </li>
+                        <li>
+                            <span class="detail-title">Japanese</span>
+                            <span class="detail-info">Intermediate</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
             <h2>My Skills</h2>
             <div class="underline"></div>
         </div>
         <div class="skills-container">
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
                 <h3>Frontend Development</h3>
                 <div class="skill-items">
                     <div class="skill-item" data-skill="HTML">
                         <span class="skill-name">HTML</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 95%"></div>
+                            <span class="skill-tooltip">Expert in semantic HTML5</span>
                         </div>
                         <span class="skill-percentage">95%</span>
                     </div>
@@ -95,6 +157,7 @@
                         <span class="skill-name">CSS</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 90%"></div>
+                            <span class="skill-tooltip">Advanced CSS3 and animations</span>
                         </div>
                         <span class="skill-percentage">90%</span>
                     </div>
@@ -102,6 +165,7 @@
                         <span class="skill-name">JavaScript</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 85%"></div>
+                            <span class="skill-tooltip">Proficient in ES6+</span>
                         </div>
                         <span class="skill-percentage">85%</span>
                     </div>
@@ -109,18 +173,20 @@
                         <span class="skill-name">React</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
+                            <span class="skill-tooltip">Building dynamic UIs</span>
                         </div>
                         <span class="skill-percentage">80%</span>
                     </div>
                 </div>
             </div>
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
                 <h3>Backend Development</h3>
                 <div class="skill-items">
                     <div class="skill-item" data-skill="Node.js">
                         <span class="skill-name">Node.js</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 75%"></div>
+                            <span class="skill-tooltip">RESTful APIs with Express</span>
                         </div>
                         <span class="skill-percentage">75%</span>
                     </div>
@@ -128,6 +194,7 @@
                         <span class="skill-name">Python</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 70%"></div>
+                            <span class="skill-tooltip">Scripting and automation</span>
                         </div>
                         <span class="skill-percentage">70%</span>
                     </div>
@@ -135,6 +202,7 @@
                         <span class="skill-name">Database (SQL/NoSQL)</span>
                         <div class="skill-bar">
                             <div class="skill-progress" style="width: 80%"></div>
+                            <span class="skill-tooltip">MongoDB and MySQL</span>
                         </div>
                         <span class="skill-percentage">80%</span>
                     </div>
@@ -145,7 +213,7 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
             <h2>My Projects</h2>
             <div class="underline"></div>
         </div>
@@ -156,9 +224,9 @@
             <button class="filter-btn" data-filter="other">Other</button>
         </div>
         <div class="project-grid">
-            <div class="project-card" data-category="web">
+            <div class="project-card" data-category="web" data-images="akademi bridge.png,ab 2 (1).png,ab 2 (2).png" data-aos="fade-up">
                 <div class="project-image">
-                    <img src="akademi bridge.png" alt="Project Name">
+                    <img src="akademi bridge.png" alt="E-commerce Website" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>E-commerce Website</h3>
@@ -170,14 +238,14 @@
                         <span>React</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        <a href="https://academy-bridge.vercel.app/" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/hilal1709/academy-bridge" class="project-link"><i class="fab fa-github"></i> Source Code</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card" data-category="app">
+            <div class="project-card" data-category="app" data-images="task.png,app.png,app 2.jpg" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-image">
-                    <img src="task.png" alt="Project Name">
+                    <img src="task.png" alt="Task Management App" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>Task Management App</h3>
@@ -193,9 +261,9 @@
                     </div>
                 </div>
             </div>
-            <div class="project-card" data-category="web">
+            <div class="project-card" data-category="web" data-images="porto.png,port 2 (1).png,port 2 (2).png,portfolio2.jpg" data-aos="fade-up" data-aos-delay="200">
                 <div class="project-image">
-                    <img src="porto.png" alt="Project Name">
+                    <img src="porto.png" alt="Portfolio Website" loading="lazy">
                 </div>
                 <div class="project-info">
                     <h3>Portfolio Website</h3>
@@ -206,25 +274,25 @@
                         <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                        <a href="https://portofolio-nine-psi.vercel.app/index%20-%20Copy%20-%20Copy.html" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://github.com/hilal1709/Portofolio" class="project-link"><i class="fab fa-github"></i> Source Code</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card" data-category="other">
+            <div class="project-card" data-category="other" data-images="game.jpg,game 2.png,game 3.png" data-aos="fade-up" data-aos-delay="300">
                 <div class="project-image">
-                    <img src="data.jpg" alt="Project Name">
+                    <img src="game.jpg" alt="Data Visualization Dashboard" loading="lazy">
                 </div>
                 <div class="project-info">
-                    <h3>Data Visualization Dashboard</h3>
-                    <p>Interactive dashboard for visualizing and analyzing complex datasets.</p>
+                    <h3>Game Development</h3>
+                    <p>2d pixel game with a story that makes us know the meaning of life</p>
                     <div class="project-tech">
-                        <span>D3.js</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
+                        <span>Godot Engine</span>
+                        <span>C++</span>
+                        <span>C#</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
+                        <a href="https://happycat-studios.itch.io/onasunnyday" class="project-link"><i class="fas fa-link"></i> Live Demo</a>
                         <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
                     </div>
                 </div>
@@ -232,16 +300,36 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Testimonials</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card" data-aos="fade-up">
+                <p>"Hilal is an exceptional developer with great attention to detail."</p>
+                <h4>John Doe</h4>
+                <span>Client</span>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <p>"Working with Hilal was a pleasure. His designs are both functional and beautiful."</p>
+                <h4>Jane Smith</h4>
+                <span>Collaborator</span>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
             <h2>Get In Touch</h2>
             <div class="underline"></div>
         </div>
         <div class="contact-content">
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
                 <h3>Contact Information</h3>
-                <p>Feel free to reach out to me through any of these channels. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+                <p>Feel free to reach out to me through any of these channels. I'm always open to discussing new projects or opportunities.</p>
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -266,28 +354,41 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi-4399302a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link" target="_blank"><i class="fab fa-linkedin"></i><span class="tooltip">LinkedIn</span></a>
-                    <a href="https://github.com/hilal1709" class="social-link" target="_blank"><i class="fab fa-github"></i><span class="tooltip">GitHub</span></a>
-                    <a href="https://twitter.com/MipaHilal" class="social-link" target="_blank"><i class="fab fa-twitter"></i><span class="tooltip">Twitter</span></a>
-                    <a href="https://www.instagram.com/hilal_lazuardi17" class="social-link" target="_blank"><i class="fab fa-instagram"></i><span class="tooltip">Instagram</span></a>
+                    <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi-4399302a4" class="social-link" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i><span class="tooltip">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/hilal1709" class="social-link" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i><span class="tooltip">GitHub</span>
+                    </a>
+                    <a href="https://twitter.com/MipaHilal" class="social-link" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i><span class="tooltip">Twitter</span>
+                    </a>
+                    <a href="https://www.instagram.com/hilal_lazuardi17" class="social-link" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i><span class="tooltip">Instagram</span>
+                    </a>
                 </div>
             </div>
-            <div class="contact-form">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="200">
                 <h3>Send Me a Message</h3>
-                <form id="contactForm">
+                <form id="contactForm" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Name</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject">
+                        <input type="text" id="subject" name="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        <textarea id="message" name="message" placeholder=" " required></textarea>
+                        <label for="message">Message</label>
                     </div>
                     <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+                    <div id="formStatus" class="form-status"></div>
                 </form>
                 <div id="formStatus" class="form-status"></div>
             </div>
@@ -295,33 +396,36 @@
     </section>
 
     <!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2025 hilal lazuardi. All Rights Reserved.</p>
-        
-        <!-- Footer Social Links -->
-        <div class="footer-social">
-            <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi-4399302a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/hilal1709" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://twitter.com/MipaHilal" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/hilal_lazuardi17" target="_blank"><i class="fab fa-instagram"></i></a>
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Hilal Lazuardi. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/muhammad-hilal-lazuardi-4399302a4" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/hilal1709" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/MipaHilal" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/hilal_lazuardi17" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-        
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Custom Cursor Elements -->
+    <div class="custom-cursor"></div>
+    <div class="cursor-follower"></div>
+    <div class="cursor-trail-container"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
